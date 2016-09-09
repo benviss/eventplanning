@@ -16,14 +16,12 @@ public class App {
     startEventPlanner();
   }
 
-
   public static void startEventPlanner() {
       System.out.println("Simply select your options and we will provide you a total cost report!\n");
       System.out.println("___________________________________________________________________\n");
       Event newEvent = takeUserInputs();
       printCosts(newEvent);
-    }
-
+  }
   public static Event takeUserInputs() {
     Console console = System.console();
     System.out.println("How many people will be attending this party?");
@@ -82,9 +80,6 @@ public class App {
     "Your cost for Food was $" + _event.tallyFoodCost() + "\n" +
     "Your cost for the Duration was $" + _event.tallyDurationCost() + "\n" +
     "___________________________________________________________________"
-
     );
   }
-
-
 }
