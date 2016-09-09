@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EventTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-09-09T16:16:14" hostname="Ben-Vissotzkys-MacBook-Pro.local" time="0.004">
+<testsuite name="EventTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-09-09T17:02:31" hostname="Ben-Vissotzkys-MacBook-Pro.local" time="0.01">
   <properties/>
-  <testcase name="newEvent_returnsGuestNumber_True" classname="EventTest" time="0.004"/>
+  <testcase name="newEvent_returnsAlcohol_True" classname="EventTest" time="0.002"/>
+  <testcase name="newEvent_returnsGuestNumber_100" classname="EventTest" time="0.001"/>
+  <testcase name="newEvent_returnsVenue_Patio" classname="EventTest" time="0.0"/>
+  <testcase name="newEvent_returnsBand_Ruckers" classname="EventTest" time="0.0"/>
+  <testcase name="newEvent_returnsDuration_60" classname="EventTest" time="0.0"/>
+  <testcase name="newEvent_returnsFood_Lots" classname="EventTest" time="0.0"/>
   <testcase name="newEvent_instantiatesCorrectly_True" classname="EventTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
