@@ -15,10 +15,11 @@ public class Event {
     mFood = _food;
     mDuration = _duration;
   }
+
   public Integer tallyGuestCost() {
     Integer guestCost = 0;
     if (getGuests() >= 250) {
-      guestCost = 500;
+      guestCost = getGuests()*2;
     } else if (getGuests() >= 150){
       guestCost = 250;
     } else if (getGuests() >= 100){
@@ -32,6 +33,7 @@ public class Event {
     }
     return guestCost;
   }
+
   public Integer tallyVenueCost() {
     Integer venueCost = 0;
     switch (getVenue()) {
@@ -47,6 +49,7 @@ public class Event {
     }
     return venueCost;
   }
+
   public Integer tallyBandCost() {
     Integer bandCost = 0;
     switch (getBand()) {
@@ -66,6 +69,7 @@ public class Event {
     }
     return bandCost;
   }
+
   public Integer tallyFoodCost() {
     Integer foodCost = 0;
     switch (getFood()) {
@@ -81,10 +85,11 @@ public class Event {
     }
     return foodCost;
   }
+
   public Integer tallyDurationCost() {
     Integer durationCost = 0;
     if (getDuration() >= 420) {
-      durationCost = 500;
+      durationCost = getDuration();
     } else if (getDuration() >= 360){
       durationCost = 250;
     } else if (getDuration() >= 240){
@@ -98,14 +103,20 @@ public class Event {
     }
     return durationCost;
   }
+
   public Integer tallyEventCost() {
     Integer eventCost = 0;
-    if(mAlcohol) {
-      eventCost += (getGuests() * 5);
-    }
-    eventCost += (tallyGuestCost() + tallyVenueCost() + tallyBandCost() + tallyFoodCost() + tallyDurationCost());
+    eventCost += (tallyGuestCost() + tallyVenueCost() + tallyAlcoholCost() + tallyBandCost() + tallyFoodCost() + tallyDurationCost());
     return eventCost;
   }
+  public Integer tallyAlcoholCost() {
+    Integer alcoholCost = 0;
+    if(mAlcohol) {
+      alcoholCost += (getGuests() * 5);
+    }
+    return alcoholCost;
+  }
+
   public Integer getEventCost() {
     return mEventCost;
   }
